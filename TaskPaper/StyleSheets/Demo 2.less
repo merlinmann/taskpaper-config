@@ -1,0 +1,284 @@
+@font-family: -apple-system, "San Francisco", "Lucida Grande", sans-serif;
+@nbmix: 40%;
+
+.nbteal() {
+  color: #2e6765;
+  background-color: mix(#8fe6d3, #ffffff, @nbmix);
+}
+.nbyellow() {
+  color: #605c2b;
+  background-color: mix(#e9d92b, #ffffff, @nbmix);
+}
+.nbgreen() {
+  color: #2f5d20;
+  background-color: mix(#9aff42, #ffffff, @nbmix);
+}
+.nbbrown() {
+  color: #493934;
+  background-color: mix(#ada389, #ffffff, @nbmix);
+}
+.nbred() {
+  color: #603546;
+  background-color: mix(#da919b, #ffffff, @nbmix);
+}
+.nbblue() {
+  color: #3e6566;
+  background-color: mix(#78d0c9, #ffffff, @nbmix);
+}
+.nbviolet() {
+  color: #1a0340;
+  background-color: mix(#ae7dff, #ffffff, @nbmix);
+}
+
+item[data-type="note"] {
+  font-style: italic;
+  font-size: smaller;
+  color: gray;
+}
+item[data-type="project"] {
+  font-weight: bold;
+}
+
+
+// BEGIN Tag Styles
+
+// House!
+item[data-house] {
+  & > run[content] {
+    background-color: #eee;
+    color: orange;
+  }
+}
+
+// Office! 
+item[data-office] {
+  color: #eee;
+  & > run[content] {
+    background-color: #eee;
+    color: blue;
+  }
+}
+
+// Errands! 
+item[data-errands] {
+  & > run[content] {
+  color: purple;
+  background-color: #ccc;
+  }
+}
+
+
+// Buyonline! 
+item[data-buyonline] {
+  & > run[content] {
+  color: fuchsia;
+  background-color: #ccc;
+  }
+}
+
+
+// Internet! 
+item[data-net] {
+  & > run[content] {
+  color: purple;
+  background-color: #ccc;
+  }
+}
+
+// iOS! 
+item[data-ios] {
+  & > run[content] {
+  color: maroon;
+  background-color: #ccc;
+  }
+}
+
+
+
+
+
+// END Tag Styles
+
+
+
+
+// priority + focus
+item[data-i],
+item[data-ii],
+item[data-iii],
+item[data-focus] {
+  & > run[content] {
+    background-color: #bf363b;
+    color: #ffffff;
+  }
+}
+item[data-i][data-done],
+item[data-ii][data-done],
+item[data-iii][data-done] {
+  & > run[content] {
+    text-strikethrough-color: #ffffff;
+  }
+}
+item[data-ii],
+item[data-iii],
+item[data-focus] {
+  & > run[content] {
+    font-weight: bold;
+  }
+}
+item[data-iii] {
+  font-size: @user-font-size * 1.25;
+  line-height-multiple: 1.5;
+}
+item[data-today] {
+  color: #605c2b;
+  background-color: mix(#e9d92b, #ffffff, @nbmix);
+  & > run[tag] {
+    color: mix(#605c2b, #e9d92b, 50%);
+  }
+  &[data-done] {
+    & > run[content] {
+      text-strikethrough-color: #605c2b;
+    }
+  }
+}
+
+item > run[tag="data-fb"][tag],
+item > run[tag="data-fi"][tag],
+item > run[tag="data-fu"][tag],
+item > run[tag="data-fr"][tag],
+item > run[tag="data-fm"][tag],
+item > run[tag="data-fs"][tag],
+item > run[tag="data-fl"][tag],
+item > run[tag="data-fh"][tag],
+item > run[tag="data-cb"][tag],
+item > run[tag="data-cr"][tag],
+item > run[tag="data-cy"][tag],
+item > run[tag="data-cm"][tag],
+item > run[tag="data-cg"][tag],
+item > run[tag="data-cv"][tag] {
+  color: mix(@text-color, @background-color, 15%);
+}
+item[data-fb=""] > run[content],
+item > run[tag="data-fb"][tagvalue] {
+  font-weight: bold;
+}
+item[data-fi=""] > run[content],
+item > run[tag="data-fi"][tagvalue] {
+  font-style: italic;
+}
+item[data-fu=""] > run[content],
+item > run[tag="data-fu"][tagvalue] {
+  text-decoration: underline;
+}
+item[data-fr=""] > run[content],
+item > run[tag="data-fr"][tagvalue] {
+  font-family: Georgia, "Times New Roman", serif;
+}
+item[data-fm=""] > run[content],
+item > run[tag="data-fm"][tagvalue] {
+  font-family: Consolas, Menlo, monospace;
+}
+item[data-fs=""],
+item[data-fs=""] > run[tag],
+item > run[tag="data-fs"][tagvalue] {
+  font-size: @user-font-size * 0.8;
+}
+item[data-fl=""],
+item[data-fl=""] > run[tag],
+item > run[tag="data-fl"][tagvalue] {
+  font-size: @user-font-size * 1.2;
+}
+item[data-fh=""],
+item[data-fh=""] > run[tag],
+item > run[tag="data-fh"][tagvalue] {
+  font-size: @user-font-size * 1.5;
+}
+item > run[tag="data-fb"][tagvalue],
+item > run[tag="data-fi"][tagvalue],
+item > run[tag="data-fu"][tagvalue],
+item > run[tag="data-fr"][tagvalue],
+item > run[tag="data-fm"][tagvalue],
+item > run[tag="data-fs"][tagvalue],
+item > run[tag="data-fl"][tagvalue],
+item > run[tag="data-fh"][tagvalue] {
+  color: @text-color;
+}
+item[data-cb=""] > run[content],
+item > run[tag="data-cb"][tagvalue] {
+  .nbblue();
+}
+item[data-cr=""] > run[content],
+item > run[tag="data-cr"][tagvalue] {
+  .nbred();
+}
+item[data-cy=""] > run[content],
+item > run[tag="data-cy"][tagvalue] {
+  .nbyellow();
+}
+item[data-cm=""] > run[content],
+item > run[tag="data-cm"][tagvalue] {
+  .nbbrown();
+}
+item[data-cg=""] > run[content],
+item > run[tag="data-cg"][tagvalue] {
+  .nbgreen();
+}
+item[data-cv=""] > run[content],
+item > run[tag="data-cv"][tagvalue] {
+  .nbviolet();
+}
+item[data-fu=""][data-cb=""] > run[content],
+item[data-fu=""] > run[tag="data-cb"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #78d0c9;
+}
+item[data-fu=""][data-cr=""] > run[content],
+item[data-fu=""] > run[tag="data-cr"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #da919b;
+}
+item[data-fu=""][data-cy=""] > run[content],
+item[data-fu=""] > run[tag="data-cy"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #e9d92b;
+}
+item[data-fu=""][data-cm=""] > run[content],
+item[data-fu=""] > run[tag="data-cm"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #ada389;
+}
+item[data-fu=""][data-cg=""] > run[content],
+item[data-fu=""] > run[tag="data-cg"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #9aff42;
+}
+item[data-fu=""][data-cv=""] > run[content],
+item[data-fu=""] > run[tag="data-cv"][tagvalue] {
+  text-underline: NSUnderlineStyleSingle;
+  text-underline-color: #ae7dff;
+}
+
+item {
+  handle-size: @handle-size;
+  handle-border-width: floor(1.5 * @ui-scale);
+}
+item[expanded] {
+  handle-border-color: @handle-secondary-color;
+}
+item[collapsed] {
+  handle-color: @handle-color;
+  handle-border-color: none;
+}
+item[filtered] {
+  handle-color: @handle-secondary-color;
+  handle-border-color: none;
+}
+
+item[mouseOverHandle] {
+  handle-size: @handle-size + (2 * @ui-scale);
+}
+
+item[mouseOverHandle][leaf] {
+  handle-border-color: @handle-secondary-color;
+}
