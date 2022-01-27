@@ -1,0 +1,13 @@
+This is a configuration outline. Use it to store searches that you want to show in the sidebar for all TaskPaper documents.
+
+Searches:
+	All - Not Done @search(project *//not @done)
+	House  @search(@type = task and @house and not @done)
+	Office @search(@type = task and @office and not @done)
+	Errands @search(@type = task and @errands and not @done)
+	House - Next Actions @search(@type = task and @house//not @done)
+	Office - Next Actions @search(@type = task and @office//not @done)
+	Due Soon @search(@due >=[d] today)
+	Overdue @search(@due <=[d] today)
+	Not Yet @search(@start >=[d] today)
+	Focus @search(@type = task and @focus and not @done)
