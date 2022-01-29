@@ -5,8 +5,8 @@
     // TODO Why I like and often recommend TaskPaper
     - who this probably is and isn't for
 - First Steps
-    - get the Mac app // TODO link
-    - read about getting started // TODO link
+    - get the Mac app // TODO link to Mac app
+    - read about getting started // TODO link to Getting Started
     - pick a way to sync between devices
 - Learn these key commands[^1] <!-- TODO look up O'Reilly conventions for formatting commands -->
     - "Tag with…Done" - **`CMD-D`**
@@ -20,7 +20,7 @@
             - (and most definitely _not_ a storage shed)
     - consider giving your tags names starting with alphabetically unique letters
         - allows way faster, no-look autocomplete
-    - // TODO more Best Practices go here
+    - // TODO put more Best Practices here
 - Becoming a power user
     - learn examples of handy Sidebar and Editor searches
     - add your most used tags and searches as defaults in the "Configurations" folder
@@ -34,6 +34,6 @@
         - RECC: start with an existing style sheet
             - to learn how it works
             - to save yourself a huge amount of effort
-  - // TODO more sexy, later-on stuff goes here
+  - // TODO put more sexy, later-on stuff here
 
 [^1]: I'm _pretty_ sure these are the default key commands. But, if you ever have any doubt (as ever) just type `CMD-SHIFT-/` to bring up the Help menu to search all the menu items.
